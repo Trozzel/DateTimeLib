@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/CTime.hpp
+string
+-
+ctime
+-
+iostream
+-
+dt_tools.hpp
+../include/dt_tools.hpp
+
+../include/dt_tools.hpp
+vector
+-
+string
+-
+
+/Users/jorge/Cpp/dt/src/dt_test.cpp
+iostream
+-
+CTime.hpp
+/Users/jorge/Cpp/dt/src/CTime.hpp
+
