@@ -13,6 +13,8 @@ ctime
 -
 iostream
 -
+memory
+-
 dt_tools.hpp
 ../include/dt_tools.hpp
 
@@ -22,9 +24,9 @@ vector
 string
 -
 
-/Users/jorge/Cpp/dt/src/dt_test.cpp
-iostream
+/home/george/Documents/Cpp/datetime/src/CTime.cpp
+sstream
 -
 CTime.hpp
-/Users/jorge/Cpp/dt/src/CTime.hpp
+/home/george/Documents/Cpp/datetime/src/CTime.hpp
 

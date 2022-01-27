@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/testCTime.dir/src/dt_cli.cpp.o CMakeFiles/testCTime.dir/src/dt_test.cpp.o CMakeFiles/testCTime.dir/src/dt_tools.cpp.o CMakeFiles/testCTime.dir/src/CTime.cpp.o  -o testCTime 
+/usr/bin/c++  -g   CMakeFiles/testCTime.dir/src/dt_test.cpp.o CMakeFiles/testCTime.dir/src/dt_tools.cpp.o CMakeFiles/testCTime.dir/src/CTime.cpp.o  -o testCTime 
