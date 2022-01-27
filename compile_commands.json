@@ -1,27 +1,27 @@
 [
 {
   "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/dt_test.cpp.o -c /home/george/Documents/Cpp/datetime/src/dt_test.cpp",
+  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -g   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/dt_test.cpp.o -c /home/george/Documents/Cpp/datetime/src/dt_test.cpp",
   "file": "/home/george/Documents/Cpp/datetime/src/dt_test.cpp"
 },
 {
   "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/dt_tools.cpp.o -c /home/george/Documents/Cpp/datetime/src/dt_tools.cpp",
+  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -g   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/dt_tools.cpp.o -c /home/george/Documents/Cpp/datetime/src/dt_tools.cpp",
   "file": "/home/george/Documents/Cpp/datetime/src/dt_tools.cpp"
 },
 {
   "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/CTime.cpp.o -c /home/george/Documents/Cpp/datetime/src/CTime.cpp",
+  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -g   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/CTime.cpp.o -c /home/george/Documents/Cpp/datetime/src/CTime.cpp",
   "file": "/home/george/Documents/Cpp/datetime/src/CTime.cpp"
 },
 {
   "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/dt.dir/src/CTime.cpp.o -c /home/george/Documents/Cpp/datetime/src/CTime.cpp",
+  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -g   -std=gnu++2a -o CMakeFiles/dt.dir/src/CTime.cpp.o -c /home/george/Documents/Cpp/datetime/src/CTime.cpp",
   "file": "/home/george/Documents/Cpp/datetime/src/CTime.cpp"
 },
 {
   "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/dt.dir/src/dt_tools.cpp.o -c /home/george/Documents/Cpp/datetime/src/dt_tools.cpp",
+  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -g   -std=gnu++2a -o CMakeFiles/dt.dir/src/dt_tools.cpp.o -c /home/george/Documents/Cpp/datetime/src/dt_tools.cpp",
   "file": "/home/george/Documents/Cpp/datetime/src/dt_tools.cpp"
 }
 ]

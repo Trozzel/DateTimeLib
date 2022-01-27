@@ -33,5 +33,18 @@ add_executable(testCTime
 	src/CTime.cpp
 	)
 
+#file(GLOB HEADERS "include/*.hpp")
+set (HEADERS 
+	include/dt_tools.hpp
+	include/CTime.hpp
+	)
+
+#EXECUTE_PROCESS ( COMMAND ${CMAKE_COMMAND} -E copy_directory
+#	${CMAKE_SOURCE_BINARY_DIR}/include
+#	/usr/local/include/dt
+#	)
+file(COPY ${HEADERS} DESTINATION /usr/local/include)
+
 # TO COMPLETE, RUN cmake install TO PLACE LIBRARY IN lib DIRECTORY
 install(TARGETS dt DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+
