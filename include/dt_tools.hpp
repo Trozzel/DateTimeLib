@@ -49,6 +49,14 @@ bool isValidIso8610(const char* iso8610str);
  */
 bool isValidDate(int y, int m, int d);
 
+// REPEAT TYPE
+/*******************************************************************************
+ * Describes different manners in which a CTime object can repeat
+ */
+enum class RepeatType {
+	Daily, Weekly, Monthly, Yearly
+};
+
 } /* namespace dt */
 
 #endif //LIBDATETIME_ST_TOOLS_H

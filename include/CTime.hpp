@@ -80,6 +80,9 @@ public:
     CTime& addMonths(int nmonths);
     CTime& addYears (int nyears);
 
+	// APPLY REPEAT
+	void applyRepeat(int qty, RepeatType repeatType);
+
     // STATIC METHODS
     static double getDiffTime(const CTime& ct2, const CTime& ct1);
     static CTime currentCTime();

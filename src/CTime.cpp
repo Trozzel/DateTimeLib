@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// DEFAULT CTOR - defaults to 0630
+// DEFAULT CTOR - defaults to "today" at 0630
 dt::CTime::CTime() 
 {
     _time = std::time(nullptr);
@@ -233,6 +233,28 @@ dt::CTime& dt::CTime::addYears(int nyears)
     pTm->tm_year += nyears;
     _time = std::mktime(pTm);
     return *this;
+}
+
+// APPLY REPEAT
+void dt::CTime::applyRepeat(int qty, RepeatType repeatType)
+{
+	struct tm* pTm = localtime(&_time);
+
+	switch (repeatType) {
+	case RepeatType::Daily:
+		pTm->tm_mday += qty;
+		break;
+	case RepeatType::Weekly:
+		pTm->tm_mday += 7 * qty;
+		break;
+	case RepeatType::Monthly:
+		pTm->tm_mon += qty;
+		break;
+	case RepeatType::Yearly:
+		pTm->tm_year += qty;
+		break;
+	}
+	_time = mktime(pTm);
 }
 
 /********************* STATIC FUNCTIONS ***************************************/
