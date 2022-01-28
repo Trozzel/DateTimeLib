@@ -17,8 +17,8 @@ ENDIF()
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-set(CMAKE_BUILD_TYPE DEBUG)
-#set(CMAKE_BUILD_TYPE RELEASE)
+#set(CMAKE_BUILD_TYPE DEBUG)
+set(CMAKE_BUILD_TYPE RELEASE)
 
 # CREATE STATIC LIBRARY
 add_library(dt STATIC 
@@ -39,12 +39,9 @@ set (HEADERS
 	include/CTime.hpp
 	)
 
-#EXECUTE_PROCESS ( COMMAND ${CMAKE_COMMAND} -E copy_directory
-#	${CMAKE_SOURCE_BINARY_DIR}/include
-#	/usr/local/include/dt
-#	)
+#file(COPY ${HEADERS} DESTINATION /usr/local/include)
 file(COPY ${HEADERS} DESTINATION /usr/local/include)
 
 # TO COMPLETE, RUN cmake install TO PLACE LIBRARY IN lib DIRECTORY
-install(TARGETS dt DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+install(TARGETS dt DESTINATION /usr/local/lib)
 
