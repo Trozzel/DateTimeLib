@@ -6,33 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../include/CTime.hpp
-string
--
-ctime
--
-iostream
--
-memory
--
-dt_tools.hpp
-../include/dt_tools.hpp
-
-../include/dt_tools.hpp
-vector
--
-string
--
-
-/Users/jorge/Cpp/dt/src/CTime.cpp
-sstream
--
-CTime.hpp
-/Users/jorge/Cpp/dt/src/CTime.hpp
-
-/Users/jorge/Cpp/dt/src/dt_tools.cpp
-cstring
--
-dt_tools.hpp
-/Users/jorge/Cpp/dt/src/dt_tools.hpp
-

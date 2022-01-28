@@ -1,4 +1,3 @@
-#NOTE: copy to /usr/local/include and /usr/local/lib when done
 cmake_minimum_required(VERSION 3.16)
 project(libDateTime)
 
@@ -21,7 +20,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(CMAKE_BUILD_TYPE RELEASE)
 
 # CREATE STATIC LIBRARY
-add_library(dt STATIC 
+add_library(dt SHARED
 	src/CTime.cpp
 	src/dt_tools.cpp
 	)

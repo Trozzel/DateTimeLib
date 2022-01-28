@@ -10,19 +10,14 @@ using namespace std;
 dt::CTime::CTime() 
 {
     _time = std::time(nullptr);
-	//struct tm* tm = localtime(&_time);
     struct tm* pTm = localtime(&_time);
-    //m_ptm->tm_hour = 6;
-    //m_ptm->tm_min  = 30;
-    //m_ptm->tm_sec  = 0;
     _time = mktime(pTm);
 }
 
 // CTOR WITH std::time_t
 dt::CTime::CTime(const time_t* time) 
 {
-	_time = *time;
-    //_pTm = std::localtime((time));
+    _time = *time;
 }
 
 // CTOR FROM ISO-8610 STRING
@@ -77,34 +72,12 @@ dt::CTime::CTime(int y, int m, int d)
 bool dt::CTime::operator==(const dt::CTime& src) const 
 {
     return getDiffTime(*this, src) == 0;
-        //m_ptm->tm_sec    == src.m_ptm->tm_sec    &&
-        //m_ptm->tm_min    == src.m_ptm->tm_min    &&
-        //m_ptm->tm_hour   == src.m_ptm->tm_hour   &&
-        //m_ptm->tm_mday   == src.m_ptm->tm_mday   &&
-        //m_ptm->tm_year   == src.m_ptm->tm_year   &&
-        //m_ptm->tm_yday   == src.m_ptm->tm_yday   &&
-        //m_ptm->tm_wday   == src.m_ptm->tm_wday   &&
-        //m_ptm->tm_mon    == src.m_ptm->tm_mon    &&
-        //m_ptm->tm_isdst  == src.m_ptm->tm_isdst  &&
-        //m_ptm->tm_gmtoff == src.m_ptm->tm_gmtoff &&
-        //m_ptm->tm_zone   == src.m_ptm->tm_zone ;
 }
 
 bool dt::CTime::operator!=(const dt::CTime& src) const 
 {
 
     return getDiffTime(*this, src) != 0;
-        //m_ptm->tm_sec    != src.m_ptm->tm_sec    ||
-        //m_ptm->tm_min    != src.m_ptm->tm_min    ||
-        //m_ptm->tm_hour   != src.m_ptm->tm_hour   ||
-        //m_ptm->tm_mday   != src.m_ptm->tm_mday   ||
-        //m_ptm->tm_year   != src.m_ptm->tm_year   ||
-        //m_ptm->tm_yday   != src.m_ptm->tm_yday   ||
-        //m_ptm->tm_wday   != src.m_ptm->tm_wday   ||
-        //m_ptm->tm_mon    != src.m_ptm->tm_mon    ||
-        //m_ptm->tm_isdst  != src.m_ptm->tm_isdst  ||
-        //m_ptm->tm_gmtoff != src.m_ptm->tm_gmtoff ||
-        //m_ptm->tm_zone   != src.m_ptm->tm_zone ;
 }
 
 bool dt::CTime::operator> (const dt::CTime& src) const 
@@ -136,7 +109,7 @@ bool dt::CTime::operator<=(const dt::CTime& src) const
  */
 std::string dt::CTime::asciiTime() const 
 {
-	struct tm* pTm = localtime(&_time);
+    struct tm* pTm = localtime(&_time);
     return std::string(asctime(pTm));
 }
 
@@ -144,7 +117,7 @@ std::string dt::CTime::asciiTime() const
 std::string dt::CTime::iso8610Str() const 
 {
     char datetime[20];
-	struct tm* pTm = localtime(&_time);
+    struct tm* pTm = localtime(&_time);
     std::strftime(datetime, 20, "%Y-%m-%d %H:%M:%S", pTm);
     return std::string { datetime };
 }
@@ -152,7 +125,7 @@ std::string dt::CTime::iso8610Str() const
 // GET HOUR
 int dt::CTime::getHour() const 
 {
-	struct tm* pTm = localtime(&_time);
+    struct tm* pTm = localtime(&_time);
     return pTm->tm_hour;
 }
 
@@ -166,7 +139,7 @@ int dt::CTime::getMDay() const
 // GET MONTH
 int dt::CTime::getMonth() const 
 {
-	struct tm* pTm = localtime(&_time);
+    struct tm* pTm = localtime(&_time);
     return pTm->tm_mon;
 }
 

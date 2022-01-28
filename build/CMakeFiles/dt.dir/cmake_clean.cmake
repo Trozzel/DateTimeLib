@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dt.dir/src/CTime.cpp.o"
   "CMakeFiles/dt.dir/src/dt_tools.cpp.o"
-  "libdt.a"
+  "libdt.dylib"
   "libdt.pdb"
 )
 
