@@ -24,7 +24,13 @@ vector
 string
 -
 
-/home/george/Documents/Cpp/datetime/src/dt_test.cpp
+/Users/jorge/Cpp/dt/src/CTime.cpp
+sstream
+-
+CTime.hpp
+/Users/jorge/Cpp/dt/src/CTime.hpp
+
+/Users/jorge/Cpp/dt/src/dt_test.cpp
 ios
 -
 iostream
@@ -34,5 +40,11 @@ limits
 streambuf
 -
 CTime.hpp
-/home/george/Documents/Cpp/datetime/src/CTime.hpp
+/Users/jorge/Cpp/dt/src/CTime.hpp
+
+/Users/jorge/Cpp/dt/src/dt_tools.cpp
+cstring
+-
+dt_tools.hpp
+/Users/jorge/Cpp/dt/src/dt_tools.hpp
 

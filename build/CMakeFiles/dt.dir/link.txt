@@ -1,2 +1,2 @@
-/usr/bin/ar qc libdt.a  CMakeFiles/dt.dir/src/CTime.cpp.o CMakeFiles/dt.dir/src/dt_tools.cpp.o
-/usr/bin/ranlib libdt.a
+/Library/Developer/CommandLineTools/usr/bin/ar qc libdt.a  CMakeFiles/dt.dir/src/CTime.cpp.o CMakeFiles/dt.dir/src/dt_tools.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libdt.a

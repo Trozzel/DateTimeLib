@@ -24,9 +24,15 @@ vector
 string
 -
 
-/home/george/Documents/Cpp/datetime/src/CTime.cpp
+/Users/jorge/Cpp/dt/src/CTime.cpp
 sstream
 -
 CTime.hpp
-/home/george/Documents/Cpp/datetime/src/CTime.hpp
+/Users/jorge/Cpp/dt/src/CTime.hpp
+
+/Users/jorge/Cpp/dt/src/dt_tools.cpp
+cstring
+-
+dt_tools.hpp
+/Users/jorge/Cpp/dt/src/dt_tools.hpp
 
