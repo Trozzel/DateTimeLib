@@ -1,6 +1,8 @@
 //
 // Created by George Ford on 3/13/21.
 //
+#include <cstring>
+
 #include "dt_tools.hpp"
 
 /* Must be in format: "YYYY-MM-DD HH:MM:SS" */

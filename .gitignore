@@ -1,0 +1,4 @@
+*.idx
+build/*
+*.o
+*.swp
