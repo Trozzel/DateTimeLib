@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++ -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -dynamiclib -Wl,-headerpad_max_install_names  -o libdt.dylib -install_name @rpath/libdt.dylib CMakeFiles/dt.dir/src/CTime.cpp.o CMakeFiles/dt.dir/src/dt_tools.cpp.o 
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libdt.so -o libdt.so CMakeFiles/dt.dir/src/CTime.cpp.o CMakeFiles/dt.dir/src/dt_tools.cpp.o 

@@ -19,7 +19,7 @@ private:
 	std::time_t _time;
 public:
     CTime();
-    explicit CTime(const time_t* time);
+    explicit CTime(const time_t time);
     explicit CTime(const char* iso8610str);
     CTime(int y, int m, int d);
     ~CTime()                           = default;
@@ -88,6 +88,7 @@ public:
     static CTime currentCTime();
     static std::string currentAscTime();
     static std::string currentISOTime();
+	static CTime nextRepeat(const CTime& cTime, RepeatType repeatType, int qty);
 };
 
 // HELPER FUNCTIONS

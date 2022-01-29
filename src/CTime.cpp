@@ -6,8 +6,10 @@
 
 using namespace std;
 
+namespace dt {
+
 // DEFAULT CTOR - defaults to "today" at 0630
-dt::CTime::CTime() 
+CTime::CTime() 
 {
     _time = std::time(nullptr);
     struct tm* pTm = localtime(&_time);
@@ -15,9 +17,9 @@ dt::CTime::CTime()
 }
 
 // CTOR WITH std::time_t
-dt::CTime::CTime(const time_t* time) 
+CTime::CTime(const time_t time) 
 {
-    _time = *time;
+    _time = time;
 }
 
 // CTOR FROM ISO-8610 STRING
@@ -26,9 +28,9 @@ dt::CTime::CTime(const time_t* time)
  * See: https://sqlite.org/lanatefunc.html
  * @param char* : iso8610sg_dtr
  */
-dt::CTime::CTime(const char* iso8610str) 
+CTime::CTime(const char* iso8610str) 
 {
-    if (!dt::isValidIso8610(iso8610str))
+    if (!isValidIso8610(iso8610str))
         throw std::invalid_argument("Must be in format 'YYYY-MM-DD HH:MM:SS'");
     int y, mon, d, hr, minute, sec = 0;
     std::sscanf(iso8610str, "%d-%d-%d %d:%d:%d",
@@ -42,13 +44,13 @@ dt::CTime::CTime(const char* iso8610str)
     pTm->tm_hour = hr;
     pTm->tm_min  = minute;
     pTm->tm_sec  = sec;
-    if (!dt::isValidDate(y, mon-1, d))
+    if (!isValidDate(y, mon-1, d))
         throw std::runtime_error("Not a valid entry date");
     _time = std::mktime(pTm);
 }
 
 // CTOR WITH INTS
-dt::CTime::CTime(int y, int m, int d) 
+CTime::CTime(int y, int m, int d) 
 {
     if (!isValidDate(y, m, d)) {
         std::stringstream ss;
@@ -69,33 +71,33 @@ dt::CTime::CTime(int y, int m, int d)
 }
 
 /************************* BOOLEAN OPERATORS **********************************/
-bool dt::CTime::operator==(const dt::CTime& src) const 
+bool CTime::operator==(const CTime& src) const 
 {
     return getDiffTime(*this, src) == 0;
 }
 
-bool dt::CTime::operator!=(const dt::CTime& src) const 
+bool CTime::operator!=(const CTime& src) const 
 {
 
     return getDiffTime(*this, src) != 0;
 }
 
-bool dt::CTime::operator> (const dt::CTime& src) const 
+bool CTime::operator> (const CTime& src) const 
 {
     return (getDiffTime(*this, src) > 0);
 }
 
-bool dt::CTime::operator< (const dt::CTime& src) const 
+bool CTime::operator< (const CTime& src) const 
 {
     return (getDiffTime(*this, src) < 0);
 }
 
-bool dt::CTime::operator>=(const dt::CTime& src) const 
+bool CTime::operator>=(const CTime& src) const 
 {
     return operator==(src) || operator>(src);
 }
 
-bool dt::CTime::operator<=(const dt::CTime& src) const 
+bool CTime::operator<=(const CTime& src) const 
 {
     return operator==(src) || operator<(src);
 }
@@ -107,14 +109,14 @@ bool dt::CTime::operator<=(const dt::CTime& src) const
  * @return std::string: example: "Fri Apr 15 12:05:34 2005"
  * @param None
  */
-std::string dt::CTime::asciiTime() const 
+std::string CTime::asciiTime() const 
 {
     struct tm* pTm = localtime(&_time);
     return std::string(asctime(pTm));
 }
 
 // GET ISO-8610 STRING
-std::string dt::CTime::iso8610Str() const 
+std::string CTime::iso8610Str() const 
 {
     char datetime[20];
     struct tm* pTm = localtime(&_time);
@@ -123,54 +125,54 @@ std::string dt::CTime::iso8610Str() const
 }
 
 // GET HOUR
-int dt::CTime::getHour() const 
+int CTime::getHour() const 
 {
     struct tm* pTm = localtime(&_time);
     return pTm->tm_hour;
 }
 
 // GET DAY
-int dt::CTime::getMDay() const 
+int CTime::getMDay() const 
 {
 	struct tm* pTm = localtime(&_time);
     return pTm->tm_mday;
 }
 
 // GET MONTH
-int dt::CTime::getMonth() const 
+int CTime::getMonth() const 
 {
     struct tm* pTm = localtime(&_time);
     return pTm->tm_mon;
 }
 
 // GET YEAR
-int dt::CTime::getYear() const 
+int CTime::getYear() const 
 {
 	struct tm* pTm = localtime(&_time);
     return pTm->tm_year;
 }
 
 // GET WEEKDAY
-int dt::CTime::getWeekday() const 
+int CTime::getWeekday() const 
 {
 	struct tm* pTm = localtime(&_time);
     return pTm->tm_wday;
 }
 
 // GET DAY OF YEAR
-int dt::CTime::getYearDay() const 
+int CTime::getYearDay() const 
 {
 	struct tm* pTm = localtime(&_time);
     return pTm->tm_yday;
 }
 
-bool dt::CTime::isDayLightSavings() const 
+bool CTime::isDayLightSavings() const 
 {
 	struct tm* pTm = localtime(&_time);
     return static_cast<bool>(pTm->tm_isdst);
 }
 
-bool dt::CTime::isLeapYear() const 
+bool CTime::isLeapYear() const 
 {
 	struct tm* pTm = localtime(&_time);
     int year = pTm->tm_year;
@@ -179,7 +181,7 @@ bool dt::CTime::isLeapYear() const
 
 /******************************** SETTERS *************************************/
 // SET DAY
-dt::CTime& dt::CTime::setDay(int day)
+CTime& CTime::setDay(int day)
 {
 	// CHECK TO SEE IF THIS IS A VALID DAY
 	struct tm* pTm = localtime(&_time);
@@ -196,20 +198,20 @@ dt::CTime& dt::CTime::setDay(int day)
 }
 
 // SET DAY
-dt::CTime& dt::CTime::setMonth(int day)
+CTime& CTime::setMonth(int day)
 {
 	return *this;
 }
 
 // SET DAY
-dt::CTime& dt::CTime::setYear(int day)
+CTime& CTime::setYear(int day)
 {
 	return *this;
 }
 
 /************************* ADD UNITS*******************************************/
 // ADD DAYS
-dt::CTime& dt::CTime::addDays(int ndays) 
+CTime& CTime::addDays(int ndays) 
 {
 	struct tm* pTm = localtime(&_time);
     pTm->tm_mday += ndays;
@@ -218,7 +220,7 @@ dt::CTime& dt::CTime::addDays(int ndays)
 }
 
 // ADD MONTHS
-dt::CTime& dt::CTime::addMonths(int nmonths) 
+CTime& CTime::addMonths(int nmonths) 
 {
 	struct tm* pTm = localtime(&_time);
     pTm->tm_mon += nmonths;
@@ -227,7 +229,7 @@ dt::CTime& dt::CTime::addMonths(int nmonths)
 }
 
 // ADD YEARS
-dt::CTime& dt::CTime::addYears(int nyears) 
+CTime& CTime::addYears(int nyears) 
 {
 	struct tm* pTm = localtime(&_time);
     pTm->tm_year += nyears;
@@ -236,7 +238,7 @@ dt::CTime& dt::CTime::addYears(int nyears)
 }
 
 // APPLY REPEAT
-void dt::CTime::applyRepeat(int qty, RepeatType repeatType)
+void CTime::applyRepeat(int qty, RepeatType repeatType)
 {
 	struct tm* pTm = localtime(&_time);
 
@@ -259,51 +261,76 @@ void dt::CTime::applyRepeat(int qty, RepeatType repeatType)
 
 /********************* STATIC FUNCTIONS ***************************************/
 // GET DIFF TIME
-double dt::CTime::getDiffTime(const dt::CTime &ct2, const dt::CTime &ct1) 
+double CTime::getDiffTime(const CTime &ct2, const CTime &ct1) 
 {
     return std::difftime(ct2._time, ct1._time);
 }
 
+// GET NEXT REPEAT
+CTime CTime::nextRepeat(const CTime& cTime, RepeatType repeatType, int qty)
+{
+	struct tm* pTm = localtime(&cTime._time);
+
+	switch (repeatType) {
+	case RepeatType::Daily:
+		pTm->tm_mday += qty;
+		break;
+	case RepeatType::Weekly:
+		pTm->tm_mday += 7 * qty;
+		break;
+	case RepeatType::Monthly:
+		pTm->tm_mon += qty;
+		break;
+	case RepeatType::Yearly:
+		pTm->tm_year += qty;
+		break;
+	}
+	return CTime(mktime(pTm));
+}
+
+
 /************************** HELPER FUNCTIONS **********************************/
-bool dt::operator==(const dt::CTime &t1, const dt::CTime &t2) 
+bool operator==(const CTime &t1, const CTime &t2) 
 {
     return t1.operator==(t2);
 }
 
-bool dt::operator!=(const dt::CTime &t1, const dt::CTime &t2) 
+bool operator!=(const CTime &t1, const CTime &t2) 
 {
     return t1.operator!=(t2);
 }
 
-double dt::operator-(const CTime& t1, const CTime& t2)
+double operator-(const CTime& t1, const CTime& t2)
 {
-	return dt::CTime::getDiffTime(t2, t1);
+	return CTime::getDiffTime(t2, t1);
 }
 
-std::ostream& dt::operator<<(std::ostream &out, const dt::CTime &src) 
+std::ostream& operator<<(std::ostream &out, const CTime &src) 
 {
     out << src.asciiTime();
     return out;
 }
 
-dt::CTime dt::CTime::currentCTime() 
+CTime CTime::currentCTime() 
 {
     struct std::tm* temp_tm;
     std::time_t t_now = std::time(nullptr);
     temp_tm = localtime(&t_now);
     mktime(temp_tm);
-    return CTime{&t_now};
+    return CTime{t_now};
 }
 
-std::string dt::CTime::currentAscTime() 
+std::string CTime::currentAscTime() 
 {
     CTime now {currentCTime()};
     return now.asciiTime();
 }
 
 
-std::string dt::CTime::currentISOTime() 
+std::string CTime::currentISOTime() 
 {
     CTime now {currentCTime()};
     return now.iso8610Str();
 }
+
+} // namespace dt

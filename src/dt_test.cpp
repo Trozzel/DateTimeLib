@@ -5,6 +5,7 @@
 #include <ios>
 #include <iostream>
 #include "CTime.hpp"
+#include "dt_tools.hpp"
 
 #define DEBUG_PRINT(arg) cout << (arg) << ": " << __LINE__ << endl;
 
@@ -14,8 +15,8 @@ int main() {
     dt::CTime ct1;
 
 	for (int i = 0; i < 8; ++i) {
-		ct1.applyRepeat(1, dt::RepeatType::Weekly);
-		cout << ct1 << endl;
+		dt::CTime temp = dt::CTime::nextRepeat(ct1, dt::RepeatType::Yearly, i);
+		cout << temp << endl;
 	}
 
     return 0;
