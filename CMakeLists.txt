@@ -30,12 +30,14 @@ add_executable(testCTime
 	src/dt_test.cpp
 	src/dt_tools.cpp
 	src/CTime.cpp
+	src/RepeatingCTime.cpp
 	)
 
 #file(GLOB HEADERS "include/*.hpp")
 set (HEADERS 
 	include/dt_tools.hpp
 	include/CTime.hpp
+	include/RepeatingCTime.hpp
 	)
 
 #file(COPY ${HEADERS} DESTINATION /usr/local/include)

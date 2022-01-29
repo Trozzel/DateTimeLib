@@ -212,6 +212,33 @@ src/CTime.cpp.s:
 	$(MAKE) -f CMakeFiles/dt.dir/build.make CMakeFiles/dt.dir/src/CTime.cpp.s
 .PHONY : src/CTime.cpp.s
 
+src/RepeatingCTime.o: src/RepeatingCTime.cpp.o
+
+.PHONY : src/RepeatingCTime.o
+
+# target to build an object file
+src/RepeatingCTime.cpp.o:
+	$(MAKE) -f CMakeFiles/testCTime.dir/build.make CMakeFiles/testCTime.dir/src/RepeatingCTime.cpp.o
+.PHONY : src/RepeatingCTime.cpp.o
+
+src/RepeatingCTime.i: src/RepeatingCTime.cpp.i
+
+.PHONY : src/RepeatingCTime.i
+
+# target to preprocess a source file
+src/RepeatingCTime.cpp.i:
+	$(MAKE) -f CMakeFiles/testCTime.dir/build.make CMakeFiles/testCTime.dir/src/RepeatingCTime.cpp.i
+.PHONY : src/RepeatingCTime.cpp.i
+
+src/RepeatingCTime.s: src/RepeatingCTime.cpp.s
+
+.PHONY : src/RepeatingCTime.s
+
+# target to generate assembly for a file
+src/RepeatingCTime.cpp.s:
+	$(MAKE) -f CMakeFiles/testCTime.dir/build.make CMakeFiles/testCTime.dir/src/RepeatingCTime.cpp.s
+.PHONY : src/RepeatingCTime.cpp.s
+
 src/dt_test.o: src/dt_test.cpp.o
 
 .PHONY : src/dt_test.o
@@ -286,6 +313,9 @@ help:
 	@echo "... src/CTime.o"
 	@echo "... src/CTime.i"
 	@echo "... src/CTime.s"
+	@echo "... src/RepeatingCTime.o"
+	@echo "... src/RepeatingCTime.i"
+	@echo "... src/RepeatingCTime.s"
 	@echo "... src/dt_test.o"
 	@echo "... src/dt_test.i"
 	@echo "... src/dt_test.s"

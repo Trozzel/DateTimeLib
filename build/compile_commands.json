@@ -16,6 +16,11 @@
 },
 {
   "directory": "/home/george/Documents/Cpp/datetime/build",
+  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/RepeatingCTime.cpp.o -c /home/george/Documents/Cpp/datetime/src/RepeatingCTime.cpp",
+  "file": "/home/george/Documents/Cpp/datetime/src/RepeatingCTime.cpp"
+},
+{
+  "directory": "/home/george/Documents/Cpp/datetime/build",
   "command": "/usr/bin/c++  -Ddt_EXPORTS -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG -fPIC   -std=gnu++2a -o CMakeFiles/dt.dir/src/CTime.cpp.o -c /home/george/Documents/Cpp/datetime/src/CTime.cpp",
   "file": "/home/george/Documents/Cpp/datetime/src/CTime.cpp"
 },
