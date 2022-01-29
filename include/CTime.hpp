@@ -37,15 +37,15 @@ public:
     bool operator>=(const CTime& src) const;
 
     // GETTERS
-    [[nodiscard]] inline std::string asciiTime()  const;   /* seconds,  range 0 to 59          */
-    [[nodiscard]] inline std::string iso8610Str() const;   /* "YYYY-MM-DD HH:MM:SS"            */
-    [[nodiscard]] inline int getHour()            const;   /* hours, range 0 to 23             */
-    [[nodiscard]] inline int getMDay()            const;   /* day of the month, range 1 to 31  */
-    [[nodiscard]] inline int getMonth()           const;   /* month, range 0 to 11             */
-    [[nodiscard]] inline int getYear()            const;   /* The number of years since 1900   */
-    [[nodiscard]] inline int getWeekday()         const;   /* day of the week, range 0 to 6    */
-    [[nodiscard]] inline int getYearDay()         const;   /* day in the year, range 0 to 365  */
-    [[nodiscard]] inline bool isDayLightSavings() const;   /* daylight saving time             */
+    [[nodiscard]]  std::string asciiTime()  const;   /* seconds,  range 0 to 59          */
+    [[nodiscard]]  std::string iso8610Str() const;   /* "YYYY-MM-DD HH:MM:SS"            */
+    [[nodiscard]]  int getHour()            const;   /* hours, range 0 to 23             */
+    [[nodiscard]]  int getMDay()            const;   /* day of the month, range 1 to 31  */
+    [[nodiscard]]  int getMonth()           const;   /* month, range 0 to 11             */
+    [[nodiscard]]  int getYear()            const;   /* The number of years since 1900   */
+    [[nodiscard]]  int getWeekday()         const;   /* day of the week, range 0 to 6    */
+    [[nodiscard]]  int getYearDay()         const;   /* day in the year, range 0 to 365  */
+    [[nodiscard]]  bool isDayLightSavings() const;   /* daylight saving time             */
     [[nodiscard]]        bool isLeapYear()        const;
 
     // OVERLOADED OPERATORS
@@ -84,7 +84,7 @@ public:
 	void applyRepeat(int qty, RepeatType repeatType);
 
     // STATIC METHODS
-    static double getDiffTime(const CTime& ct2, const CTime& ct1);
+    static double diffTime(const CTime& ct2, const CTime& ct1);
     static CTime currentCTime();
     static std::string currentAscTime();
     static std::string currentISOTime();

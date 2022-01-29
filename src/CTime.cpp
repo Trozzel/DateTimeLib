@@ -52,6 +52,7 @@ CTime::CTime(const char* iso8610str)
 // CTOR WITH INTS
 CTime::CTime(int y, int m, int d) 
 {
+	--m;
     if (!isValidDate(y, m, d)) {
         std::stringstream ss;
         ss << "(" << y << ", " << m << ", " << d << ")";
@@ -60,7 +61,7 @@ CTime::CTime(int y, int m, int d)
     time_t t = std::time(nullptr);
     struct tm* pTm = localtime(&t);
     pTm->tm_year = y - 1900;
-    pTm->tm_mon  = m - 1;
+    pTm->tm_mon  = m;
     pTm->tm_mday = d;
 
     // ADD DEFAULT VALUES
@@ -73,23 +74,23 @@ CTime::CTime(int y, int m, int d)
 /************************* BOOLEAN OPERATORS **********************************/
 bool CTime::operator==(const CTime& src) const 
 {
-    return getDiffTime(*this, src) == 0;
+    return diffTime(*this, src) == 0;
 }
 
 bool CTime::operator!=(const CTime& src) const 
 {
 
-    return getDiffTime(*this, src) != 0;
+    return diffTime(*this, src) != 0;
 }
 
 bool CTime::operator> (const CTime& src) const 
 {
-    return (getDiffTime(*this, src) > 0);
+    return (diffTime(*this, src) > 0);
 }
 
 bool CTime::operator< (const CTime& src) const 
 {
-    return (getDiffTime(*this, src) < 0);
+    return (diffTime(*this, src) < 0);
 }
 
 bool CTime::operator>=(const CTime& src) const 
@@ -261,7 +262,7 @@ void CTime::applyRepeat(int qty, RepeatType repeatType)
 
 /********************* STATIC FUNCTIONS ***************************************/
 // GET DIFF TIME
-double CTime::getDiffTime(const CTime &ct2, const CTime &ct1) 
+double CTime::diffTime(const CTime &ct2, const CTime &ct1) 
 {
     return std::difftime(ct2._time, ct1._time);
 }
@@ -302,7 +303,7 @@ bool operator!=(const CTime &t1, const CTime &t2)
 
 double operator-(const CTime& t1, const CTime& t2)
 {
-	return CTime::getDiffTime(t2, t1);
+	return CTime::diffTime(t2, t1);
 }
 
 std::ostream& operator<<(std::ostream &out, const CTime &src) 

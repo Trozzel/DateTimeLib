@@ -1,4 +1,6 @@
+#include <iostream>
 #include <algorithm>
+#include <iterator>
 
 #include "RepeatingCTime.hpp"
 
@@ -17,7 +19,7 @@ RepeatingCTime::RepeatingCTime(const CTime& cTime, RepeatType repeatType,
 
 // CTOR 2
 /******************************************************************************/
-RepeatingCTime::RepeatingCTime(std::initializer_list<CTimePacket> cTimePackets):
+RepeatingCTime::RepeatingCTime(std::vector<CTimePacket> cTimePackets):
 	_cTimePackets(cTimePackets)
 {
 }
@@ -26,13 +28,24 @@ RepeatingCTime::RepeatingCTime(std::initializer_list<CTimePacket> cTimePackets):
 /******************************************************************************/
 CTime RepeatingCTime::nextCTime()
 {
-	vector<CTimePacket> nextCTimePackets(_cTimePackets.size());
-	for (auto cTimePacket : _cTimePackets)
-		nextCTimePackets.push_back(CTimePacket::nextCTimePacket(cTimePacket));
+	using packet_t = pair<CTimePacket, double>; 
 
-	sort(nextCTimePackets.begin(), nextCTimePackets.end());
+	CTime today{};
 
-	return (*nextCTimePackets.begin()).cTime;
+	// CREATE VECTOR OF NEXT CTIMES WITH DIFFTIME AGAINST TODAY
+	vector<packet_t> packets;
+	for (auto packet : _cTimePackets) {
+		packet_t pktPair(packet, CTime::diffTime(packet.cTime, today));
+		packets.push_back(pktPair);
+	}
+
+	// SORT THE PREVIOUS PACKETS ACCORDING TO TIME FROM TODAY
+	auto comp = [&](const packet_t& p1, const packet_t& p2) {
+		return p1.second < p2.second;
+	};
+	sort(packets.begin(), packets.end(), comp);
+
+	return (*packets.begin()).first.cTime;
 }
 
 /**************************** VECTOR FUCNTIONALITY ****************************/
