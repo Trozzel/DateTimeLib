@@ -1,7 +1,7 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/jorge/Cpp/dt
-CMake Error at CMakeLists.txt:42 (file):
-  file COPY cannot set permissions on "/usr/local/include/dt_tools.hpp":
-  Operation not permitted.
+CMake Error at CMakeLists.txt:46 (file):
+  file COPY cannot set permissions on
+  "/usr/local/include/datetime/dt_tools.hpp": Operation not permitted.
 
 
 -- Configuring incomplete, errors occurred!

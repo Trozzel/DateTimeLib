@@ -287,6 +287,8 @@ CTime CTime::nextRepeat(const CTime& cTime, RepeatType repeatType, int qty)
 	case RepeatType::Yearly:
 		pTm->tm_year += qty;
 		break;
+	case RepeatType::NoRepeat:
+		break;
 	}
 	return CTime(mktime(pTm));
 }
