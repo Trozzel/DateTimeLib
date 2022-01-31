@@ -38,10 +38,12 @@ set (HEADERS
 	include/dt_tools.hpp
 	include/CTime.hpp
 	include/RepeatingCTime.hpp
+	include/datetime.hpp
+	include/CTimePacket.hpp
 	)
 
 #file(COPY ${HEADERS} DESTINATION /usr/local/include)
-file(COPY ${HEADERS} DESTINATION /usr/local/include)
+file(COPY ${HEADERS} DESTINATION /usr/local/include/datetime)
 
 # TO COMPLETE, RUN cmake install TO PLACE LIBRARY IN lib DIRECTORY
 install(TARGETS dt DESTINATION /usr/local/lib)

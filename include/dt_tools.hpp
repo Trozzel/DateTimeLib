@@ -54,7 +54,7 @@ bool isValidDate(int y, int m, int d);
  * Describes different manners in which a CTime object can repeat
  */
 enum class RepeatType {
-	Daily, Weekly, Monthly, Yearly
+	Daily, Weekly, Monthly, Yearly, NoRepeat
 };
 
 } /* namespace dt */
