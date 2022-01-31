@@ -38,7 +38,13 @@ vector
 string
 -
 
-/home/george/Documents/Cpp/datetime/src/RepeatingCTime.cpp
+/Users/jorge/Cpp/dt/src/CTime.cpp
+sstream
+-
+CTime.hpp
+/Users/jorge/Cpp/dt/src/CTime.hpp
+
+/Users/jorge/Cpp/dt/src/RepeatingCTime.cpp
 iostream
 -
 algorithm
@@ -46,19 +52,25 @@ algorithm
 iterator
 -
 RepeatingCTime.hpp
-/home/george/Documents/Cpp/datetime/src/RepeatingCTime.hpp
+/Users/jorge/Cpp/dt/src/RepeatingCTime.hpp
 
-/home/george/Documents/Cpp/datetime/src/dt_test.cpp
+/Users/jorge/Cpp/dt/src/dt_test.cpp
 ios
 -
 iostream
 -
 CTime.hpp
-/home/george/Documents/Cpp/datetime/src/CTime.hpp
+/Users/jorge/Cpp/dt/src/CTime.hpp
 CTimePacket.hpp
-/home/george/Documents/Cpp/datetime/src/CTimePacket.hpp
+/Users/jorge/Cpp/dt/src/CTimePacket.hpp
 RepeatingCTime.hpp
-/home/george/Documents/Cpp/datetime/src/RepeatingCTime.hpp
+/Users/jorge/Cpp/dt/src/RepeatingCTime.hpp
 dt_tools.hpp
-/home/george/Documents/Cpp/datetime/src/dt_tools.hpp
+/Users/jorge/Cpp/dt/src/dt_tools.hpp
+
+/Users/jorge/Cpp/dt/src/dt_tools.cpp
+cstring
+-
+dt_tools.hpp
+/Users/jorge/Cpp/dt/src/dt_tools.hpp
 

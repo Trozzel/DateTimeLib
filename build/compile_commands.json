@@ -1,32 +1,32 @@
 [
 {
-  "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/dt_test.cpp.o -c /home/george/Documents/Cpp/datetime/src/dt_test.cpp",
-  "file": "/home/george/Documents/Cpp/datetime/src/dt_test.cpp"
+  "directory": "/Users/jorge/Cpp/dt/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/jorge/Cpp/dt/include  -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/dt_test.cpp.o -c /Users/jorge/Cpp/dt/src/dt_test.cpp",
+  "file": "/Users/jorge/Cpp/dt/src/dt_test.cpp"
 },
 {
-  "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/dt_tools.cpp.o -c /home/george/Documents/Cpp/datetime/src/dt_tools.cpp",
-  "file": "/home/george/Documents/Cpp/datetime/src/dt_tools.cpp"
+  "directory": "/Users/jorge/Cpp/dt/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/jorge/Cpp/dt/include  -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/dt_tools.cpp.o -c /Users/jorge/Cpp/dt/src/dt_tools.cpp",
+  "file": "/Users/jorge/Cpp/dt/src/dt_tools.cpp"
 },
 {
-  "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/CTime.cpp.o -c /home/george/Documents/Cpp/datetime/src/CTime.cpp",
-  "file": "/home/george/Documents/Cpp/datetime/src/CTime.cpp"
+  "directory": "/Users/jorge/Cpp/dt/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/jorge/Cpp/dt/include  -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/CTime.cpp.o -c /Users/jorge/Cpp/dt/src/CTime.cpp",
+  "file": "/Users/jorge/Cpp/dt/src/CTime.cpp"
 },
 {
-  "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++   -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/RepeatingCTime.cpp.o -c /home/george/Documents/Cpp/datetime/src/RepeatingCTime.cpp",
-  "file": "/home/george/Documents/Cpp/datetime/src/RepeatingCTime.cpp"
+  "directory": "/Users/jorge/Cpp/dt/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/jorge/Cpp/dt/include  -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -std=gnu++2a -o CMakeFiles/testCTime.dir/src/RepeatingCTime.cpp.o -c /Users/jorge/Cpp/dt/src/RepeatingCTime.cpp",
+  "file": "/Users/jorge/Cpp/dt/src/RepeatingCTime.cpp"
 },
 {
-  "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++  -Ddt_EXPORTS -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG -fPIC   -std=gnu++2a -o CMakeFiles/dt.dir/src/CTime.cpp.o -c /home/george/Documents/Cpp/datetime/src/CTime.cpp",
-  "file": "/home/george/Documents/Cpp/datetime/src/CTime.cpp"
+  "directory": "/Users/jorge/Cpp/dt/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -Ddt_EXPORTS -I/Users/jorge/Cpp/dt/include  -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -fPIC   -std=gnu++2a -o CMakeFiles/dt.dir/src/CTime.cpp.o -c /Users/jorge/Cpp/dt/src/CTime.cpp",
+  "file": "/Users/jorge/Cpp/dt/src/CTime.cpp"
 },
 {
-  "directory": "/home/george/Documents/Cpp/datetime/build",
-  "command": "/usr/bin/c++  -Ddt_EXPORTS -I/home/george/Documents/Cpp/datetime/include  -O3 -DNDEBUG -fPIC   -std=gnu++2a -o CMakeFiles/dt.dir/src/dt_tools.cpp.o -c /home/george/Documents/Cpp/datetime/src/dt_tools.cpp",
-  "file": "/home/george/Documents/Cpp/datetime/src/dt_tools.cpp"
+  "directory": "/Users/jorge/Cpp/dt/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -Ddt_EXPORTS -I/Users/jorge/Cpp/dt/include  -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -fPIC   -std=gnu++2a -o CMakeFiles/dt.dir/src/dt_tools.cpp.o -c /Users/jorge/Cpp/dt/src/dt_tools.cpp",
+  "file": "/Users/jorge/Cpp/dt/src/dt_tools.cpp"
 }
 ]
