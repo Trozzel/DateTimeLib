@@ -256,6 +256,8 @@ void CTime::applyRepeat(int qty, RepeatType repeatType)
 	case RepeatType::Yearly:
 		pTm->tm_year += qty;
 		break;
+	case RepeatType::NoRepeat:
+		break;
 	}
 	_time = mktime(pTm);
 }
